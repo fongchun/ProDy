@@ -4,7 +4,11 @@ import re
 from numpy import unique, linalg, diag, sqrt, dot, chararray, divide, zeros_like, zeros, allclose, ceil, abs
 from numpy import diff, where, insert, nan, isnan, loadtxt, array, round, average, min, max, delete, vstack
 from numpy import sign, arange, asarray, ndarray, subtract, power, sum, isscalar, empty, triu, tril, median
-from numpy import alltrue
+from numpy import all
+try:
+    from numpy import alltrue
+except ImportError:
+    from numpy import all as alltrue
 from collections import Counter
 import numbers
 
